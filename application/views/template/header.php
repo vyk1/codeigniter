@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<?php
-
-?>
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8">
@@ -12,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<!-- <link rel="icon" href="<?php echo base_url(); ?>public/images/favicon.ico"> -->
-	<title>Sanza - Onepage Multipurpose Bootstrap HTML by MOOZThemes.com</title>
+	<title>AutoDidata - só saber</title>
 	<!-- Bootstrap core CSS -->
 	<link href="<?php echo base_url(); ?>public/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -20,6 +17,18 @@
 	<link href="<?php echo base_url(); ?>public/css/owl.carousel.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>public/css/owl.theme.default.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>public/css/style.css" rel="stylesheet">
+	<script>var base_url = '<?php echo base_url() ?>';</script>
+
+	<?php
+	if (isset($styles)) {
+		foreach ($styles as $style_name) {
+			$href = base_url() . "public/css/" . $style_name ?>
+			<link rel="stylesheet" href="<?= $href ?>">
+	<?php
+		}
+	}
+	?>
+
 </head>
 
 <body id="page-top">
