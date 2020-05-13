@@ -1,9 +1,9 @@
 /* custom */
 
-html, body {
+/* html, body {
 	max-width: 100%;
 	overflow-x: hidden;
-}
+} */
 
 #actions .btn-primary {
 	background-color: royalblue;

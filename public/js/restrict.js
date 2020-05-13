@@ -183,7 +183,7 @@ $(function () {
 		"autoWidth": false,
 		"processing": true,
 		"serverSide": true,
-		"responsive": true,
+		"scrollX": true,
 		"ajax": {
 			"url": BASE_URL + "restrict/ajax_list_course",
 			"type": "POST",
@@ -253,7 +253,7 @@ $(function () {
 		"autoWidth": false,
 		"processing": true,
 		"serverSide": true,
-		"responsive": true,
+		"scrollX": true,
 		"ajax": {
 			"url": BASE_URL + "restrict/ajax_list_member",
 			"type": "POST",
@@ -322,7 +322,7 @@ $(function () {
 		"autoWidth": false,
 		"processing": true,
 		"serverSide": true,
-		"responsive": true,
+		"scrollX": true,
 		"ajax": {
 			"url": BASE_URL + "restrict/ajax_list_user",
 			"type": "POST",
