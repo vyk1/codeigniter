@@ -17,7 +17,7 @@
 	<link href="<?php echo base_url(); ?>public/css/owl.carousel.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>public/css/owl.theme.default.min.css" rel="stylesheet">
 	<link href="<?php echo base_url(); ?>public/css/style.css" rel="stylesheet">
-	<script>var base_url = '<?php echo base_url() ?>';</script>
+	<script>const base_url = '<?php echo base_url() ?>';</script>
 
 	<?php
 	if (isset($styles)) {

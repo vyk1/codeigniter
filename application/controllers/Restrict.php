@@ -15,11 +15,13 @@ class Restrict extends CI_Controller{
 			$data = array(
 				"styles" => array(
 					"dataTables.bootstrap.min.css",
-					"datatables.min.css"
+					"dataTables.min.css",
+					"responsive.dataTable.min.css",
 				),
 				"scripts" => array(
-					"sweetalert2.all.min.js",
 					"dataTables.bootstrap.min.js",
+					"dataTables.select.min.js",
+					"sweetalert2.all.min.js",
 					"datatables.min.js",
 					"util.js",
 					"restrict.js" 
@@ -92,7 +94,8 @@ class Restrict extends CI_Controller{
 		$config["upload_path"] = "./tmp/";
 		$config["allowed_types"] = "gif|png|jpg";
 		$config["overwrite"] = TRUE;
-
+		
+		// biblioteca do code igniter para fazer upload de arquivos!
 		$this->load->library("upload", $config);
 
 		$json = array();
@@ -109,7 +112,6 @@ class Restrict extends CI_Controller{
 				$json["status"] = 0;
 				$json["error"] = "Arquivo não deve ser maior que 1 MB!";
 			}
-
 		}
 
 		echo json_encode($json);
@@ -244,8 +246,8 @@ class Restrict extends CI_Controller{
 			}
 		}
 
-		if (empty($data["user_full_name"])) {
-			$json["error_list"]["#user_full_name"] = "Nome Completo é obrigatório!";
+		if (empty($data["user_fullname"])) {
+			$json["error_list"]["#user_fullname"] = "Nome Completo é obrigatório!";
 		} 
 
 		if (empty($data["user_email"])) {
@@ -355,7 +357,7 @@ class Restrict extends CI_Controller{
 		$data = $this->users_model->get_data($user_id)->result_array()[0];
 		$json["input"]["user_id"] = $data["user_id"];
 		$json["input"]["user_login"] = $data["user_login"];
-		$json["input"]["user_full_name"] = $data["user_full_name"];
+		$json["input"]["user_fullname"] = $data["user_fullname"];
 		$json["input"]["user_email"] = $data["user_email"];
 		$json["input"]["user_email_confirm"] = $data["user_email"];
 		$json["input"]["user_password"] = $data["password_hash"];
@@ -436,7 +438,7 @@ class Restrict extends CI_Controller{
 			$row[] = $course->course_duration;
 			$row[] = '<div class="description">'.$course->course_description.'</div>';
 
-			$row[] = '<div style="display: inline-block;">
+			$row[] = '<div style="display: inline-block;" id="actions">
 						<button class="btn btn-primary btn-edit-course" 
 							course_id="'.$course->course_id.'">
 							<i class="fa fa-edit"></i>
@@ -466,7 +468,6 @@ class Restrict extends CI_Controller{
 		if (!$this->input->is_ajax_request()) {
 			exit("Nenhum acesso de script direto permitido!");
 		}
-
 		$this->load->model("team_model");
 		$team = $this->team_model->get_datatable();
 
@@ -484,7 +485,7 @@ class Restrict extends CI_Controller{
 
 			$row[] = '<div class="description">'.$member->member_description.'</div>';
 
-			$row[] = '<div style="display: inline-block;">
+			$row[] = '<div style="display: inline-block;" id="actions">
 						<button class="btn btn-primary btn-edit-member" 
 							member_id="'.$member->member_id.'">
 							<i class="fa fa-edit"></i>
@@ -523,10 +524,10 @@ class Restrict extends CI_Controller{
 
 			$row = array();
 			$row[] = $user->user_login;
-			$row[] = $user->user_full_name;
+			$row[] = $user->user_fullname;
 			$row[] = $user->user_email;
 
-			$row[] = '<div style="display: inline-block;">
+			$row[] = '<div style="display: inline-block;" id="actions">
 						<button class="btn btn-primary btn-edit-user" 
 							user_id="'.$user->user_id.'">
 							<i class="fa fa-edit"></i>
