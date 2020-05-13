@@ -24,7 +24,7 @@
 
 <body id="page-top">
 	<!-- Navigation -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-shrink navbar-fixed-top">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header page-scroll">
@@ -43,19 +43,16 @@
 						<a href="#page-top"></a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#about">About</a>
+						<a class="page-scroll" href="<?php echo base_url() ?>#about">Sobre</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#services">Services</a>
+						<a class="page-scroll" href="<?php echo base_url() ?>#services">Cursos</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#portfolio">Portfolio</a>
+						<a class="page-scroll" href="<?php echo base_url() ?>#contact">Contato</a>
 					</li>
 					<li>
-						<a class="page-scroll" href="#team">Team</a>
-					</li>
-					<li>
-						<a class="page-scroll" href="#contact">Contact</a>
+						<a class="page-scroll" href="<?php echo base_url() ?>restrict">Login</a>
 					</li>
 				</ul>
 			</div>
@@ -63,14 +60,3 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
-	<header>
-		<div class="container">
-			<div class="slider-container">
-				<div class="intro-text">
-					<div class="intro-lead-in">Bem vindo à AutoDidata!</div>
-					<div class="intro-heading">Sua única maneira de dominar o mundo</div>
-					<a href="#about" class="page-scroll btn btn-xl">Ah é?</a>
-				</div>
-			</div>
-		</div>
-	</header>

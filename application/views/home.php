@@ -1,3 +1,14 @@
+<header>
+    <div class="container">
+        <div class="slider-container">
+            <div class="intro-text">
+                <div class="intro-lead-in">Bem vindo à AutoDidata!</div>
+                <div class="intro-heading">Sua única maneira de dominar o mundo</div>
+                <a href="#about" class="page-scroll btn btn-xl">Ah é?</a>
+            </div>
+        </div>
+    </div>
+</header>
 
 <section id="about" class="dark-bg">
     <div class="container">
