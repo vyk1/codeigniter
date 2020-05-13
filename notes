@@ -1,0 +1,41 @@
+não mexe no index.php do Code Igniter
+
+USER GUIDE (opcional)
+    fonte de ref para helpers, funções ..., se houver dúvida procura aqui
+
+TESTS
+    mocks
+
+SYSTEM
+    principal pasta do framework
+    core -> fx internas, segurança, controle de exceções ...
+    database -> ...tem suporte paravários
+    fonts -> ...
+    helpers -> conunto de fx básicas para facilitar a vida
+        funções pré determinadas i.e. captcha, mail ...
+    language
+        idiomas que o sistema suportará
+    libraries
+        bibliotecas parão do framework
+    index.html proibe acesso direto a pasta com o .htaccess
+
+PUBLIC
+    pasta criada para colocar os arquivos css, fonts, imagens, index ...
+
+APPLICATION
+    pasta mais importante
+    onde são salvos os arquivos do MVC
+    cache -> usa sistema de cache
+    config -> ... i.e. baseurl, language, encrypt key...
+    controllers -> arquivos responsáveis por receber o valor da url e fazer as operações
+    models -> resp por ser acessado eplo controller e fazer o acesso com o bd
+    views-> páginas html que tem o código de apresentação
+        templates-> footer, header
+
+2. TEMPLATES NO CODE IGNITER É DEFINIDO EM application/libraries
+    é habilitado em autoload.php
+
+3. colocar lá nas views - 3 arquivos referentes às views do Template.php
+4. depois da conversão header home footer scripts ...
+5. controller!
+6. baseurl serve para enviar para o sistema todo
