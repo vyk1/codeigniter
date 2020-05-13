@@ -3,6 +3,7 @@
 <?php
 
 ?>
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,7 @@
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<!-- <link rel="icon" href="<?php echo base_url();?>public/images/favicon.ico"> -->
+	<!-- <link rel="icon" href="<?php echo base_url(); ?>public/images/favicon.ico"> -->
 	<title>Sanza - Onepage Multipurpose Bootstrap HTML by MOOZThemes.com</title>
 	<!-- Bootstrap core CSS -->
 	<link href="<?php echo base_url(); ?>public/css/bootstrap.min.css" rel="stylesheet">
@@ -33,7 +34,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand page-scroll" href="#page-top"><img src="<?php echo base_url();?>public/images/logo.png" alt="Sanza theme logo"></a>
+				<a class="navbar-brand page-scroll" href="#page-top"><img src="<?php echo base_url(); ?>public/images/logo.png" alt="Sanza theme logo"></a>
 			</div>
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -62,3 +63,14 @@
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
+	<header>
+		<div class="container">
+			<div class="slider-container">
+				<div class="intro-text">
+					<div class="intro-lead-in">Bem vindo à AutoDidata!</div>
+					<div class="intro-heading">Sua única maneira de dominar o mundo</div>
+					<a href="#about" class="page-scroll btn btn-xl">Ah é?</a>
+				</div>
+			</div>
+		</div>
+	</header>
