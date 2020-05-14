@@ -8,6 +8,10 @@ class Home extends CI_Controller {
 
 		$this->load->model("courses_model");
 		$courses = $this->courses_model->show_courses();
+		// controlando por aqui, no momento
+		// pegando os 3 primeiros
+		$courses = array_slice($courses, 0, 5);
+
 
 		$this->load->model("team_model");
 		$team = $this->team_model->show_team();

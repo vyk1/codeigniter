@@ -32,7 +32,7 @@
         <div class="container-fluid">
           <h2 class="text-center"><strong>Gerenciar Cursos</strong></h2>
           <a id="btn_add_course" class="btn btn-primary"><i class="fa fa-plus">&nbsp;&nbsp;Adicionar Curso</i></a>
-          <table class="table table-striped table-bordered display" cellspacing="0" width="100%" id="dt_courses">
+          <table class="table table-striped table-bordered" id="dt_courses">
             <thead>
               <tr class="tableheader">
                 <th class="dt-center">Nome</th>
